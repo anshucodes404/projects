@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - Web Player: Music for Everyone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+  <div class="container flex">
+    <div class="left">
+
+      <div class="home bg_gray ">
+        <div class="close">
+          <img class="invert" src="assets/close.svg" alt="">
+        </div>
+        <div class="logo">
+          <img class="invert" height="40" src="assets/logo.svg" alt="">
+        </div>
+        <ul>
+          <li><img width="19" class="invert" src="assets/home.svg" alt="">Home</li>
+          <li><img width="19" class="invert" src="assets/search.svg" alt="">Search</li>
+        </ul>
+      </div>
+      <div class="library bg_gray">
+        <div class="heading flex">
+          <img class="invert" src="assets/playlist.svg" alt="">
+          <h2>Your Library</h2>
+        </div>
+        <div class="songs">
+          <ul>
+          </ul>
+        </div>
+        <div class="footer flex">
+          <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+          <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+          <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+          </div>
+          <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+          <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+          <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="right bg_gray">
+      <div class="header">
+        <div class="nav flex">
+          <img class="invert hamburger" src="assets/hamburger.svg" width="30" alt="">
+          <img src="assets/left-arrow.png" class="invert" width="20" alt="">
+          <img src="assets/right-arrow.png" class="invert" width="20">
+        </div>
+        <div class="buttons">
+          <button class="signup">Sign up</button>
+          <button class="login">Log in</button>
+        </div>
+      </div>
+      <div class="main bg_gray">
+        <div class="spotifyPlaylist">
+          <h1>Spotify Playlists</h1>
+          <div class="cardContainer">
+            <div data-folder="English Songs" class="card">
+              <div class="image">
+                <img src="assets/cover.jpg" alt="">
+                <div class="play">
+                  <button class="play-button" aria-label="Play">
+                    <div class="play-icon"></div>
+                  </button>
+                </div>
+              </div>
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and you with happiness</p>
+            </div>
+
+            <div data-folder="Hindi Songs" class="card">
+              <div class="image">
+                <img src="assets/cover2.jpeg" alt="">
+                <div class="play">
+                  <button class="play-button" aria-label="Play">
+                    <div class="play-icon"></div>
+                  </button>
+                </div>
+              </div>
+              <h2>Restful Sleep Rhythms</h2>
+              <p>Hits to boost your mood and you with happiness</p>
+            </div>
+            <div data-folder="Devotional Songs" class="card">
+              <div class="image">
+                <img src="assets/cover3.jpeg" alt="">
+                <div class="play">
+                  <button class="play-button" aria-label="Play">
+                    <div class="play-icon"></div>
+                  </button>
+                </div>
+              </div>
+              <h2>Shikayat</h2>
+              <p>Hits to boost your mood and you with happiness</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="playbar">
+      <div class="controls">
+        <div class="songInfo">
+        </div>
+        <div class="songButtons">
+          <img width="30" id="previous" src="assets/prevsong.svg" class="invert" alt="">
+          <img width="30" id="play" src="assets/playnow.svg" class="invert" alt="">
+          <img width="30" id="next" src="assets/nextsong.svg" class="invert" alt="">
+        </div>
+        <div class="vol">
+          <div class="time">
+          </div>
+          <div class="volume">
+            <img class="invert" src="assets/volume.svg" alt="">
+            <input type="range" name="volume" id="volume">
+          </div>
+        </div>
+      </div>
+        <div class="seek_bar">
+          <div class="progress"></div>
+          <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

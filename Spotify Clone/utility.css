@@ -1,0 +1,42 @@
+.flex{
+  display: flex;
+}
+
+.bg_black{
+  background-color: black;
+}
+
+.bg_gray{
+  background-color: rgb(18, 18, 18);
+}
+
+.invert{
+  filter: invert(1);
+}
+
+.radius{
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e84; /* Dark track background */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4CAF50; /* Green thumb for contrast */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #45a049; /* Lighter green on hover */
+}
+
+/* Smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+  width: 3px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Dark track background */
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #72727260; /* Green thumb for contrast */
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4545452a; /* Lighter green on hover */
+}
+
+/* Smooth scrolling effect */

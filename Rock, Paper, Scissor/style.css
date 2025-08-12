@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Bangers&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    color: #E5E4E2;
+    font-family: "Baloo 2";
+}
+
+.choices > div > img{
+   border-radius: 50%;
+   /* width: 14%; */
+}
+
+h1{
+    margin: 12px 20px;
+    padding: 6px;
+    font-size: 45px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #52525262;
+    text-align: center;
+    border-radius: 10px;
+    /* opacity: 0.2; */
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.choices > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.images{   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transformed{
+    transform: scale(1.1);
+    box-shadow:  0 0 17px 5px rgb(118, 118, 118) ;
+}
+
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    margin-top: 65px;
+}
+
+.scoreboard > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    gap: 17px;
+}
+
+.msg{
+    display: flex;
+    font-size: 35px;
+    justify-content: center;
+    margin-top: 25px;
+    cursor: pointer;
+    gap: 30px;
+    align-items: center;
+}
+
+.message{
+    background-color: blue;
+    padding: 5px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.choose{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.choose > div{
+    display: flex;
+    gap: 12px;
+    background-color: #52525262;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
