@@ -1,0 +1,75 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#gradient)" stroke="white" stroke-width="8"/>
+  
+  <!-- Sun rays -->
+  <g id="sun-rays">
+    <path d="M256 40 L256 80" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+    <path d="M256 432 L256 472" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+    <path d="M40 256 L80 256" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+    <path d="M432 256 L472 256" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+    <path d="M80 80 L110 110" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+    <path d="M402 402 L432 432" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+    <path d="M80 432 L110 402" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+    <path d="M402 80 L432 110" stroke="#FFD700" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Sun center -->
+  <circle cx="256" cy="256" r="80" fill="#FFD700"/>
+  
+  <!-- Cloud -->
+  <g id="cloud" transform="translate(180, 200)">
+    <ellipse cx="76" cy="40" rx="60" ry="30" fill="white" opacity="0.9"/>
+    <ellipse cx="40" cy="60" rx="40" ry="25" fill="white" opacity="0.8"/>
+    <ellipse cx="112" cy="60" rx="35" ry="20" fill="white" opacity="0.7"/>
+  </g>
+  
+  <!-- Rain drops -->
+  <g id="rain" opacity="0.8">
+    <path d="M200 320 L200 360" stroke="#87CEEB" stroke-width="4" stroke-linecap="round"/>
+    <path d="M240 310 L240 350" stroke="#87CEEB" stroke-width="4" stroke-linecap="round"/>
+    <path d="M280 320 L280 360" stroke="#87CEEB" stroke-width="4" stroke-linecap="round"/>
+    <path d="M320 310 L320 350" stroke="#87CEEB" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Animations -->
+  <style>
+    #sun-rays {
+      animation: rotate 20s linear infinite;
+      transform-origin: 256px 256px;
+    }
+    
+    #cloud {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    #rain {
+      animation: rain-fall 1.5s linear infinite;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translate(180px, 200px) translateY(0px); }
+      50% { transform: translate(180px, 200px) translateY(-10px); }
+    }
+    
+    @keyframes rain-fall {
+      0% { opacity: 0.8; transform: translateY(0px); }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; transform: translateY(20px); }
+    }
+  </style>
+</svg>
+

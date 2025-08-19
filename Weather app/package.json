@@ -1,0 +1,67 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A beautiful, animated weather application with PWA support",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "build": "echo 'No build step required for this project'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "weather",
+    "pwa",
+    "progressive-web-app",
+    "html5",
+    "css3",
+    "javascript",
+    "responsive",
+    "mobile-first",
+    "offline",
+    "service-worker"
+  ],
+  "author": "Weather App Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/weather-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/weather-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/weather-app#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "pwa": {
+    "name": "Weather App",
+    "short_name": "Weather",
+    "description": "Beautiful weather app with animated UI",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#667eea",
+    "theme_color": "#4f46e5",
+    "icons": [
+      {
+        "src": "assets/weather-icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/weather-icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+}

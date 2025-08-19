@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <meta name="description" content="Beautiful weather app with animated UI">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/weather-icon.png">
+    <link rel="apple-touch-icon" href="assets/weather-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Loading Screen -->
+        <div class="loading-screen" id="loadingScreen">
+            <div class="loading-animation">
+                <div class="weather-icon loading">
+                    <div class="sun"></div>
+                    <div class="cloud"></div>
+                </div>
+                <p>Loading weather data...</p>
+            </div>
+        </div>
+
+        <!-- Main App -->
+        <div class="main-app" id="mainApp" style="display: none;">
+            <!-- Header -->
+            <header class="header">
+                <div class="location-info">
+                    <h1 class="city-name" id="cityName">Loading...</h1>
+                    <p class="date-time" id="dateTime">--</p>
+                </div>
+                <button class="search-btn" id="searchBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Current Weather -->
+            <section class="current-weather">
+                <div class="weather-main">
+                    <div class="weather-icon-large" id="weatherIconLarge">
+                        <div class="sun-large"></div>
+                        <div class="cloud-large"></div>
+                    </div>
+                    <div class="temperature">
+                        <span class="temp-value" id="tempValue">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <p class="weather-description" id="weatherDescription">--</p>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Feels like</span>
+                            <span class="detail-value" id="feelsLike">--°C</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind</span>
+                            <span class="detail-value" id="windSpeed">-- km/h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Pressure</span>
+                            <span class="detail-value" id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hourly Forecast -->
+            <section class="hourly-forecast">
+                <h2>Today's Forecast</h2>
+                <div class="hourly-container" id="hourlyContainer">
+                    <!-- Hourly items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Daily Forecast -->
+            <section class="daily-forecast">
+                <h2>7-Day Forecast</h2>
+                <div class="daily-container" id="dailyContainer">
+                    <!-- Daily items will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Search Location</h3>
+                    <button class="close-btn" id="closeSearchBtn">×</button>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" id="searchInput" placeholder="Enter city name..." autocomplete="off">
+                    <button class="search-submit-btn" id="searchSubmitBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <!-- Search results will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Install Prompt -->
+        <div class="install-prompt" id="installPrompt" style="display: none;">
+            <div class="install-content">
+                <p>Install Weather App for a better experience!</p>
+                <button class="install-btn" id="installBtn">Install</button>
+                <button class="dismiss-btn" id="dismissInstallBtn">Not now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
